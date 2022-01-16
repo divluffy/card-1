@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 52px rgba(0, 0, 0, 0.438);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.4) rotate(8deg) translateY(40px);
+}
+
+.watch button {
+    background-color: rgb(128, 133, 211);
+    margin-top: 15px;
+    color: #fff;
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+    position: relative;
+    z-index: 10;
+}
+
+.watch button:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(35, 39, 39, 0.281);
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out;
+    z-index: -1;
+}
+
+.watch button:hover:before {
+    transform: scaleX(1);
+}
+
+.watch button:hover {
+    background-color: rgb(66, 70, 148);
+}
+
+.bowl {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #0000, #b1883191);
+    direction: rtl;
+    text-align: center;
+    font-size: 1.5rem;
+    bottom: -100px;
+    opacity: 0;
+}
+
+.card:hover .bowl {
+    bottom: 0;
+    opacity: 1;
+}
+
+.btn {
+    position: absolute;
+    left: 10px;
+    transition: all 0.4s ease-in-out;
+    height: 45px;
+    width: 45px;
+    background: #cc3345b6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -60px;
+    opacity: 0;
+}
+
+.card:hover .btn {
+    opacity: 1;
+    top: 10px;
+}
+
+.btn svg {
+    height: 40px;
+    width: 40px;
+    fill: #fff;
+}
